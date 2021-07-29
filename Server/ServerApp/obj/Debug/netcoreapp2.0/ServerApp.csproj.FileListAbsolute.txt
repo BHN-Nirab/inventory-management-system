@@ -1,0 +1,33 @@
+C:\Users\Rifat\source\repos\ServerApp\ServerApp\bin\Debug\netcoreapp2.0\ServerApp.deps.json
+C:\Users\Rifat\source\repos\ServerApp\ServerApp\bin\Debug\netcoreapp2.0\ServerApp.runtimeconfig.json
+C:\Users\Rifat\source\repos\ServerApp\ServerApp\bin\Debug\netcoreapp2.0\ServerApp.runtimeconfig.dev.json
+C:\Users\Rifat\source\repos\ServerApp\ServerApp\bin\Debug\netcoreapp2.0\ServerApp.dll
+C:\Users\Rifat\source\repos\ServerApp\ServerApp\obj\Debug\netcoreapp2.0\ServerApp.csprojResolveAssemblyReference.cache
+C:\Users\Rifat\source\repos\ServerApp\ServerApp\obj\Debug\netcoreapp2.0\ServerApp.csproj.CoreCompileInputs.cache
+C:\Users\Rifat\source\repos\ServerApp\ServerApp\obj\Debug\netcoreapp2.0\ServerApp.AssemblyInfoInputs.cache
+C:\Users\Rifat\source\repos\ServerApp\ServerApp\obj\Debug\netcoreapp2.0\ServerApp.AssemblyInfo.cs
+C:\Users\Rifat\source\repos\ServerApp\ServerApp\bin\Debug\netcoreapp2.0\ServerApp.pdb
+C:\Users\Rifat\source\repos\ServerApp\ServerApp\obj\Debug\netcoreapp2.0\ServerApp.dll
+C:\Users\Rifat\source\repos\ServerApp\ServerApp\obj\Debug\netcoreapp2.0\ServerApp.pdb
+E:\projects\IIT\BSSE Program\BSSE 10th Batch\Web Technology\ServerApp\ServerApp\bin\Debug\netcoreapp2.0\ServerApp.deps.json
+E:\projects\IIT\BSSE Program\BSSE 10th Batch\Web Technology\ServerApp\ServerApp\bin\Debug\netcoreapp2.0\ServerApp.runtimeconfig.json
+E:\projects\IIT\BSSE Program\BSSE 10th Batch\Web Technology\ServerApp\ServerApp\bin\Debug\netcoreapp2.0\ServerApp.runtimeconfig.dev.json
+E:\projects\IIT\BSSE Program\BSSE 10th Batch\Web Technology\ServerApp\ServerApp\bin\Debug\netcoreapp2.0\ServerApp.dll
+E:\projects\IIT\BSSE Program\BSSE 10th Batch\Web Technology\ServerApp\ServerApp\bin\Debug\netcoreapp2.0\ServerApp.pdb
+E:\projects\IIT\BSSE Program\BSSE 10th Batch\Web Technology\ServerApp\ServerApp\obj\Debug\netcoreapp2.0\ServerApp.csprojResolveAssemblyReference.cache
+E:\projects\IIT\BSSE Program\BSSE 10th Batch\Web Technology\ServerApp\ServerApp\obj\Debug\netcoreapp2.0\ServerApp.csproj.CoreCompileInputs.cache
+E:\projects\IIT\BSSE Program\BSSE 10th Batch\Web Technology\ServerApp\ServerApp\obj\Debug\netcoreapp2.0\ServerApp.AssemblyInfoInputs.cache
+E:\projects\IIT\BSSE Program\BSSE 10th Batch\Web Technology\ServerApp\ServerApp\obj\Debug\netcoreapp2.0\ServerApp.AssemblyInfo.cs
+E:\projects\IIT\BSSE Program\BSSE 10th Batch\Web Technology\ServerApp\ServerApp\obj\Debug\netcoreapp2.0\ServerApp.dll
+E:\projects\IIT\BSSE Program\BSSE 10th Batch\Web Technology\ServerApp\ServerApp\obj\Debug\netcoreapp2.0\ServerApp.pdb
+E:\Lab\Web Tech\Inventory Management System\Server\ServerApp\bin\Debug\netcoreapp2.0\ServerApp.deps.json
+E:\Lab\Web Tech\Inventory Management System\Server\ServerApp\bin\Debug\netcoreapp2.0\ServerApp.runtimeconfig.json
+E:\Lab\Web Tech\Inventory Management System\Server\ServerApp\bin\Debug\netcoreapp2.0\ServerApp.runtimeconfig.dev.json
+E:\Lab\Web Tech\Inventory Management System\Server\ServerApp\bin\Debug\netcoreapp2.0\ServerApp.dll
+E:\Lab\Web Tech\Inventory Management System\Server\ServerApp\bin\Debug\netcoreapp2.0\ServerApp.pdb
+E:\Lab\Web Tech\Inventory Management System\Server\ServerApp\obj\Debug\netcoreapp2.0\ServerApp.AssemblyInfoInputs.cache
+E:\Lab\Web Tech\Inventory Management System\Server\ServerApp\obj\Debug\netcoreapp2.0\ServerApp.AssemblyInfo.cs
+E:\Lab\Web Tech\Inventory Management System\Server\ServerApp\obj\Debug\netcoreapp2.0\ServerApp.csproj.CoreCompileInputs.cache
+E:\Lab\Web Tech\Inventory Management System\Server\ServerApp\obj\Debug\netcoreapp2.0\ServerApp.dll
+E:\Lab\Web Tech\Inventory Management System\Server\ServerApp\obj\Debug\netcoreapp2.0\ServerApp.pdb
+E:\Lab\Web Tech\Inventory Management System\Server\ServerApp\obj\Debug\netcoreapp2.0\ServerApp.genruntimeconfig.cache
