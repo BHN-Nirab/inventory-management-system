@@ -1,0 +1,162 @@
+<div style="background: rgba(0, 0, 0, 0.100);"> 
+    <table class="table" style="transform: translate(10%, 0%);">
+        <tbody>
+          <tr>
+            <td class="align-bottom"><b style="font-size: 30px;">Inventory Management System</b></td>
+            <td class="align-bottom">
+                <b style="font-size: 15px;">@{{user.Name}}</b> &nbsp; &nbsp; &nbsp; &nbsp;
+                <button class="btn btn-danger" (click)="logout()">Logout</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+  <br><br>
+
+  <table class="table" style="width: max-content; margin: auto;">
+    <tbody>
+      <tr>
+        <td class="align-bottom">
+          <button type="button" class="btn btn-primary" (click)="toggleOpenAddProduct(true)">
+            Add Product
+          </button>
+        </td>
+        <td class="align-bottom">
+            <input type='date'/>&nbsp; &nbsp; &nbsp; &nbsp;
+            <button class="btn btn-secondary" (click)="toggleOpenReports(true, true)">Daily Report</button>
+        </td>
+        <td class="align-bottom">
+            <input type='date'/>&nbsp; &nbsp; &nbsp; &nbsp;
+            <button class="btn btn-secondary" (click)="toggleOpenReports(true, false)">Monthly Report</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <br><br><br>
+
+  <!-- Update Product -->
+
+
+  <div class="container" *ngIf="isOpenUpdateProduct">
+    <form>
+      <div class="form-group">
+        <label for="name">Product Name</label>
+        <input class="form-control input-md" required type="text" [(ngModel)]="product.Name"  name="Name" id="name" placeholder="Enter product name" />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input class="form-control input-md" required type="text" [(ngModel)]="product.Description" name="Description" placeholder="Enter product description" />
+      </div>
+      <div class="form-group">
+        <label for="unit">Unit</label>
+        <input class="form-control input-md" required type="number" [(ngModel)]="product.Unit" name="Unit" placeholder="Enter unit" />
+      </div>
+      <div class="form-group">
+        <label for="unitPrice">Unit Price</label>
+        <input class="form-control input-md" required type="number" [(ngModel)]="product.UnitPrice" name="UnitPrice" placeholder="Enter unit price" />
+      </div>
+      <div class="form-group">
+        <input type="submit" name="submit" (click)="update()" class="btn btn-success btn-md" value="Edit Product" />
+        <input type="submit" name="submit" (click)="toggleOpenUpdateProduct(false)" class="btn btn-secondary btn-md" value="Close" />
+      </div>
+    </form>
+  </div>
+
+  <!-- Add Product -->
+
+  <div class="container" *ngIf="isOpenAddProduct">
+    <form>
+      <div class="form-group">
+        <label for="name">Product Name</label>
+        <input class="form-control input-md" required type="text" [(ngModel)]="product.Name"  name="Name" id="name" placeholder="Enter product name" />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input class="form-control input-md" required type="text" [(ngModel)]="product.Description" name="Description" placeholder="Enter product description" />
+      </div>
+      <div class="form-group">
+        <label for="unit">Unit</label>
+        <input class="form-control input-md" required type="number" [(ngModel)]="product.Unit" name="Unit" placeholder="Enter unit" />
+      </div>
+      <div class="form-group">
+        <label for="unitPrice">Unit Price</label>
+        <input class="form-control input-md" required type="number" [(ngModel)]="product.UnitPrice" name="UnitPrice" placeholder="Enter unit price" />
+      </div>
+      <div class="form-group">
+        <input type="submit" name="submit" (click)="add()" class="btn btn-success btn-md" value="Add Product" />
+        <input type="submit" name="submit" (click)="toggleOpenAddProduct(false)" class="btn btn-secondary btn-md" value="Close" />
+      </div>
+    </form>
+  </div>
+
+
+  <!-- All Product -->
+
+  <table class="table table-hover" *ngIf="!isOpenReports">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Unit</th>
+        <th scope="col">Unit Price</th>
+        <th scope="col">Transaction By</th>
+        <th scope="col">Sale and Purchase</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let product of products">
+      <tr>
+        <th scope="row">{{product.Id}}</th>
+        <td>{{product.Name}}</td>
+        <td>{{product.Description}}</td>
+        <td>{{product.Unit}} <b style="color: rgb(145, 30, 30);">{{product.Unit==0? 'Stock Out' : ''}}</b></td>
+        <td>{{product.UnitPrice}}</td>
+        <td>{{product.UserName}}</td>
+        <td>
+          <button class="btn btn-secondary" (click)="purchase(product)">Purchase</button>
+          <input required type="number" [(ngModel)]="product.SaleAndPurchaseUnit"  name="product.Id" id="product.Id" placeholder="Enter Unit" />
+          <button class="btn btn-danger" (click)="sale(product)">Sale</button></td>
+        <td>
+          <button class="btn btn-secondary" (click)="initializeUpdateProduct(product)">Edit</button>
+          <button class="btn btn-danger" (click)="delete(product.Id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Daily And Monthly Report -->
+
+  <div *ngIf="isOpenReports">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Product Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Unit</th>
+          <th scope="col">Unit Price</th>
+          <th scope="col">Transaction By</th>
+          <th scope="col">Transaction Type</th>
+          <th scope="col">Created</th>
+          
+        </tr>
+      </thead>
+      <tbody *ngFor="let report of reports">
+        <tr>
+          <th scope="row">{{report.ProductName}}</th>
+          <td>{{report.ProductDescription}}</td>
+          <td>{{report.Unit}}</td>
+          <td>{{report.UnitPrice}}</td>
+          <td>{{report.UserName}}</td>
+          <td>{{report.TransactionType}}</td>
+          <td>{{report.Created}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <input type="submit" name="submit" (click)="toggleOpenReports(false, false)" class="btn btn-secondary btn-md" value="Close" />
+
+  </div>

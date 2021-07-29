@@ -1,0 +1,23 @@
+<h1>person 1</h1>
+<h1>person 2</h1>
+<h1>person 3</h1>
+<h1>person 4</h1>
+<h1>person 5</h1>
+
+<h1> {{ title }} </h1>
+
+<input type="text" [(ngModel)]="title" name="title" />
+
+<div *ngFor="let person of persons">
+    <p> {{person.firstName}} </p>
+    <p> {{person.lastName}} </p>
+    <p> {{person.id}} </p>
+    <hr>
+</div>
+
+<form>
+  <input type="text" [(ngModel)]="newPerson.firstName" name="firstname" />
+  <input type="text" [(ngModel)]="newPerson.lastName" name="lastname" />
+  <input type="number" [(ngModel)]="newPerson.id" name="id" />
+  <button (click)="addNewPerson()">submit</button>
+</form>

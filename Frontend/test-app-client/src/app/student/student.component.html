@@ -1,0 +1,18 @@
+<h1>Student Component</h1>
+
+<div *ngFor="let student of students">
+  <p> Id: {{student.id}} </p>
+  <p> First Name: {{student.firstName}} </p>
+  <p> Last Name: {{student.lastName}} </p>
+  <p> Session: {{student.session}} </p>
+  <hr>
+</div>
+
+<div>
+  <form>
+    First Name: <input type="text" [(ngModel)]="student.firstName" name="firstName" /> <br>
+    Last Name: <input type="text" [(ngModel)]="student.lastName" name="lastName"  /> <br>
+    Session: <input type="text" [(ngModel)]="student.session" name="session" /> <br>
+    <button (click)="insertStudent()" >submit</button>
+  </form>
+</div>

@@ -1,0 +1,42 @@
+<div class="container" *ngIf="!isLoginTab && !isValidSession">
+  <form class="myForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input class="form-control input-md" type="text" [(ngModel)]="user.Name"  name="Name" id="name" placeholder="Enter your Name" />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input class="form-control input-md" type="email" [(ngModel)]="user.Email" name="Email" placeholder="Enter your Email" />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input class="form-control input-md" type="password" [(ngModel)]="user.Password" name="Password" placeholder="Enter your Password" />
+    </div>
+    <div class="form-group">
+      <input type="submit" name="submit" (click)="createAccount()" class="btn btn-success btn-md" value="Create Account" />
+    </div>
+    <p style="color: red;">{{authError}}</p>
+    <p>Already have an Account? <a href="#" (click)="toggleLoginTab(true)" >Login</a></p>
+  </form>
+</div>
+
+
+<div *ngIf="isLoginTab && !isValidSession" class="container">
+  <form class="myForm" method="post">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input class="form-control input-md" type="email" [(ngModel)]="user.Email" name="Email" placeholder="Enter your Email" />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input class="form-control input-md" type="password" [(ngModel)]="user.Password" name="Password" placeholder="Enter your Password" />
+    </div>
+    <div class="form-group">
+      <input type="submit" (click)="login()" name="submit" class="btn btn-success btn-md" value="Login" />
+    </div>
+    <p style="color: red;">{{authError}}</p>
+    <p>Not have Account? <a href="#" (click)="toggleLoginTab(false)">Create Account</a></p>
+  </form>
+</div>
+
+<app-home *ngIf="isValidSession" (messageEvent) = "logout()"></app-home>
